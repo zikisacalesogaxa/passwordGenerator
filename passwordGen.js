@@ -15,4 +15,7 @@ const generatePass = (len) => {
     return pass;
 }
 
-console.log(generatePass(20));
+document.querySelector('button').addEventListener("click", function (e) {
+	let len = Number(document.querySelector('select').value);
+  document.querySelector('pre').innerText = generatePass(len);
+})
